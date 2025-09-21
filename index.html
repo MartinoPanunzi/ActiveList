@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="animated-header">
+    <h1>Active List</h1>
+  </header>
+
+  <!-- VIDEO DI SFONDO -->
+  <div class="bg-video-container">
+    <video autoplay muted loop id="bg-video">
+      <source src="media/videosfondo.mp4" type="video/mp4">
+      Il tuo browser non supporta i video in background.
+    </video>
+  </div>
+
+  <main>
+    <!-- Sezione Video Verticali con logo in mezzo -->
+    <section class="vertical-videos side-layout">
+      <div class="vertical-container">
+        <!-- Video 1 -->
+      <div class="vertical-item pop-in">
+        <video autoplay muted loop playsinline>
+        <source src="media/post2.mp4" type="video/mp4">
+        Il tuo browser non supporta il video.
+        </video>
+      </div>
+
+      <!-- Logo e titolo al centro -->
+      <div class="logoandtitle">
+        <img src="media/immaginelogo.jpeg" alt="Logo Active List">
+        <h2>Benvenuti in Active List</h2>
+      </div>
+
+      <!-- Video 2 (immagine o video) -->
+      <div class="vertical-item pop-in">
+        <video autoplay muted playsinline>
+          <source src="media/post2.mp4" type="video/mp4">
+          Il tuo browser non supporta il video.
+        </video>
+        <!-- Se invece vuoi solo immagine: -->
+        <!-- <img src="media/post1.jpg" alt="post instagram"> -->
+      </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- NEWS & EVENTI -->
+    <section class="news-events">
+      <h2>Ultime News & Eventi</h2>
+      <div class="news-container">
+        <div class="news-card popIn">
+          <h3>Evento Estivo</h3>
+          <p>Partecipa al nostro evento di ciclismo il 5 luglio!</p>
+        </div>
+        <div class="news-card popIn" style="animation-delay: 0.2s;">
+          <h3>Nuovo Video</h3>
+          <p>Abbiamo pubblicato un nuovo video su YouTube!</p>
+        </div>
+        <div class="news-card popIn" style="animation-delay: 0.4s;">
+          <h3>Workshop</h3>
+          <p>Iscriviti al workshop di editing video il prossimo weekend.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Form contatti / FAQ -->
+     <section class="fQa-container">
+      <section class="instagramprofile">
+
+        <a href="https://www.instagram.com/active_list" target="_blank">
+        <img src="media/instalogo.png" alt="Instagram" class="insta-logo">
+        </a>
+        <h2>Clicca qua sopra!</h2>
+      </section>
+      <section class="contact animated-form">
+        <h2>Lascia una richiesta</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Nome" required>
+          <input type="email" name="_replyto" placeholder="Email" required>
+          <textarea name="message" rows="5" placeholder="Messaggio" required></textarea>
+          <button type="submit">Invia</button>
+        </form>
+      </section>
+      <section class="instagramprofile">
+        <a href="https://www.instagram.com/active_list" target="_blank">
+        <img src="media/instalogo.png" alt="Instagram" class="insta-logo">
+        </a>
+        <h2>Clicca qua sopra!</h2>
+      </section>
+      </section>
+    </main>
+
+  <!-- FOOTER -->
+  <footer class="animated-footer">
+    <p>&copy; 2025 Active List</p>
+  </footer>
+
+</body>
+</html>
