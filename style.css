@@ -324,12 +324,15 @@ footer {
 
 @keyframes popInstaLogo {
  0%   { transform: scale(1); }
- 50%  { transform: scale(1.5); }
+ 50%  { transform: scale(1.1); }
 100% { transform: scale(1); }
 }
 
 /* FAQ + LOGHI INSTAGRAM */
 .fQa-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  max-height: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -407,23 +410,59 @@ hr {
   object-fit: cover;
 }
 
+.boxinformation {
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: normal;
+  text-align: center;
+  width: 80%;
+  color: #ffdd00;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  border-radius: 10px;
+  background-color: #0d1b8f;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  animation: fadeIn 2s forwards;
+  box-shadow: 0 0 60px 20px rgba(255,223,0,0.5);
+}
+
+.boxinformation h5 {
+  margin-top: 10px;
+  color:white
+}
+
+.mobile_instagramprofile {
+  margin-top: 20px;
+}
+
+.boxinformation_desktop-container {
+  justify-content:space-around;
+}
+
 /* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .side-layout .vertical-container {
-    flex-direction: column;
+    display: flex;
     align-items: center;
     gap: 30px;
     margin: 0 10px;
   }
 
+  .vertical-item {
+    width: 5vw;
+  }
+
   .logoandtitle {
     order: -1;
-    width: 90%;
-    margin-bottom: 30px;
+    width: 5vw;
+    margin-bottom: 5vw;
   }
 
   .logoandtitle img {
-    width: 70vw;
+    width: 50vw;
     height: auto;
   }
 
@@ -439,8 +478,8 @@ hr {
   }
 
   .fQa-container {
-    flex-direction: column;
-    gap: 20px;
+    display: flex;
+    gap: 30px;
     margin: 30px auto;
     padding: 20px;
   }
@@ -449,9 +488,9 @@ hr {
     flex: 1 1 80%;
   }
 
-  .insta-logo {
-    width: 50vw;
-    margin-bottom: 15px;
+  .instagramprofile .insta-logo {
+    display: none;
+    
   }
 
   .news-container {
@@ -463,4 +502,50 @@ hr {
   .news-card {
     width: 90%;
   }
+
+  .contact  {
+    max-width: 60vw;
+    margin: 0 auto 50px auto;
+    padding: 5vw;
+    border-radius: 15px;
+    background: #0d1b8f;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 60px 20px rgba(255,223,0,0.5);
+    transform: scale(0.95);
+    opacity: 0;
+    animation: fadeScale 1s ease forwards;
+    animation-delay: 1s;
+    color: #fff;
+  }
+
+  .instagramprofile h2 {
+    display: none;
+  }
+
+  .mobile_instagramprofile {
+    margin: 0;
+    color: white;
+    display: flex;
+    text-align: justify;
+  }
+
+  .mobile_instagramprofile h5 {
+    position: relative;
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  .mobile_instagramprofile .insta-logo {
+    margin-top: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 15px;
+    width: min(100px, 50vw);
+    height: auto;
+    margin-bottom: 20px;
+    animation: popInstaLogo 2s ease-in-out infinite;
+  }
+
 }
